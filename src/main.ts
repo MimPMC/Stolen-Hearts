@@ -1,18 +1,25 @@
 export {};
 
-const body: HTMLBodyElement | null = document.querySelector('body') as HTMLBodyElement;
+const app: HTMLBodyElement | null = document.querySelector('#app') as HTMLBodyElement;
 
-const startbutton: HTMLElement = document.createElement('button')
-startbutton.textContent = "Start"
-body?.appendChild(startbutton)
+type imageSources = [
+  { city: string },
+  { school: string }
+
+]
 
 const imageSources = [
   { city: "./public/assets/centrum_bg.png" },
   { school: "./public/assets/downtown_bg.png" }
 ];
 
-console.log(imageSources[1].school)
+const background: HTMLImageElement = document.createElement('img'); 
 
+if (imageSources[0].city) {
+  background.src = imageSources[0].city;
+  app?.appendChild(background);
+  background.className = "background"
+}
 
 
 
