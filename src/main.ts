@@ -21,6 +21,9 @@ if (imageSources.city) {
   background.className = "background"
 }
 
+const gameObject = new GameObject({x: 500, y: 500}, {x: 100, y: 100}, imageSources.city);
+gameObject.draw(background);
+
 
 
 
