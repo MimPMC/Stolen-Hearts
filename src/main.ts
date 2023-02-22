@@ -5,11 +5,13 @@ const app: HTMLBodyElement | null = document.querySelector('#app') as HTMLBodyEl
 
 type ImageSources = {
   city: string;
+  fisk:string;
   school: string;
 };
 
 const imageSources: ImageSources = {
   city: "./public/assets/centrum_bg.png",
+  fisk: "./public/assets/fisk.png",
   school: "./public/assets/downtown_bg.png",
 };
 
@@ -23,6 +25,15 @@ if (imageSources.city) {
 
 const gameObject = new GameObject({x: 500, y: 500}, {x: 100, y: 100}, imageSources.city);
 gameObject.draw(background);
+
+
+const fisk: HTMLImageElement = document.createElement('img'); 
+if (fisk) {
+  fisk.src = imageSources.fisk;
+  background?.appendChild(fisk);
+  fisk.className = "fisk"
+}
+
 
 
 

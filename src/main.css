@@ -6,11 +6,12 @@ body {
     margin: 0;
     height: 100%;
     width: 100vw;
-    background-color: rgb(106, 165, 241);
 }
 #app {
     width: 100%;
     height: 100vh;
+    top: 0;
+    left:0;
     position: relative;
 }
 .background {
@@ -22,5 +23,17 @@ body {
     height: 100%; 
     object-fit: cover; 
     object-position: center; 
+    opacity: .6;
+}
+
+.fisk {
+    width: 3000px;
+    height: 3000px;
+    position: absolute;
+    top:0;
+    left:0;
+    
+    margin-top: 200px;
+    z-index: 20;
 }
 
