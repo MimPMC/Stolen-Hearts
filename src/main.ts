@@ -54,7 +54,7 @@ function startGame() {
   );
   blushButton.draw(background, function () {
     jankos.update(5);
-    jankosTextBubble.updateText("wHAT????")
+    jankosTextBubble.updateText("What????")
 
   });
 
@@ -113,7 +113,8 @@ function startGame() {
   const jankosTextBubble = new TextBubble( { x: 5, y: 83},
     { x: 90, y: 15 },
     "text-bubble",
-    "Hey, what's up?")
+    "Hey, what's up?",
+    "Jankos")
   jankosTextBubble.draw(background)
 
   

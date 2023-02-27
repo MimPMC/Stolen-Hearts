@@ -7,7 +7,7 @@ export default class GameHandler {
     points: number;
 
 
-    constructor(scene:string[], music:string, isMusicPlaying:boolean, points:number, activeScene: string) {
+    constructor(scene:string[], music:string) {
         this.scenes = scene
         this.music = music
         this.isMusicPlaying = false
@@ -69,8 +69,6 @@ export default class GameHandler {
         }    
     }
     public toggleMusic() {
-        return !this.isMusicPlaying
-        
+        return !this.isMusicPlaying   
     }
-
 }
