@@ -59,14 +59,26 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 700px) {
+.text-bubble {
+    background-color: rgb(110, 21, 66, .7);
+    border-radius: .5rem;
+    border: 2px solid darkblue;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    padding: .9rem;
+
+}
+
+@media (max-width: 800px) {
     .choice-button {
         font-size: .7rem;
     }
     .standard-button {
         font-size: .7rem;
+    }  
+    .text-bubble {
+        font-size: .7rem;
+        padding: .2rem;
     }
-
-    
 }
 
