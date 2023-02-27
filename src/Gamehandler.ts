@@ -1,43 +1,75 @@
 
-interface scenes: {[
-    main: string
-]
-
-}
-
 export default class GameHandler {
     scenes: string[];
-    Activescene: number;
-    music: string[];
-    isMusicPlaying: boolean
-    points: number
+    activeScene: string;
+    music: string;
+    isMusicPlaying: boolean;
+    points: number;
 
 
-    constructor(scene:string[], music:string[], isMusicPlaying:boolean, points:number) {
+    constructor(scene:string[], music:string, isMusicPlaying:boolean, points:number, activeScene: string) {
         this.scenes = scene
         this.music = music
-        this.isMusicPlaying = isMusicPlaying
-        this.points = points
+        this.isMusicPlaying = false
+        this.points = 0
+        this.activeScene = "mainmenu"
     }
 
-    public changeScene(Scene: string):string {
-        switch(scene) {
-            case "mainmenu"
-            return:
+    public changeScene(scene:string) {
+        return this.activeScene = scene 
+    }
 
+    public renderActiveScene() {
+        switch(this.activeScene) {
+            case "mainmenu":
+                //start main menu scene
+            break;
+            case "library":
+                //start library story scene
+            break
+            case "story":
+                //start background story scene
+            break
+            case "play":
+                //start gameplay scene
+            break
+            default:
+                //start main menu music
+        }    
+    }
+    public getPoints() {
+        return this.points
+    }
+    public setPoints(operator:string, number:number) {
+        if (operator="+") {
+            return this.points + number;
         }
-        
+        if ("-"){
+            return this.points - number;
+        }
+        else {
+            return this.points
+        }
     }
-    public updatepoints(number):number {
-
+    public changeMusic(){
+        switch(this.music) {
+            case "sadsong":
+                //start main menu music
+            break;
+            case "happysong":
+                //start library story music
+            break
+            case "guitar":
+                //start background story music
+            break
+            case "pop":
+                //start gameplay music
+            default:
+                //start main menu music
+        }    
     }
-    public updatepoints(number):number {
-        
-    }
-    public changeMusic():boolean {
-        
-    }
-    public pauseMusic():boolean {
+    public toggleMusic() {
+        return !this.isMusicPlaying
         
     }
 
