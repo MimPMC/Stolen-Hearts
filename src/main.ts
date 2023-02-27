@@ -17,9 +17,9 @@ function startGame() {
   };
 
   const imageSources: ImageSources = {
-    city: "./public/assets/centrum_bg.png",
-    fisk: "./public/assets/fisk.png",
-    home: "./public/assets/hall.png",
+    city: "/assets/centrum_bg.png",
+    fisk: "/assets/fisk.png",
+    home: "/assets/hall.png",
   };
 
   const background: HTMLDivElement = document.createElement("div");
@@ -61,12 +61,12 @@ function startGame() {
   choice.draw(background, handleChoiceButtonClick);
 
   const character1Images = [
-    "./public/assets/jankos_talking.png",
-    "./public/assets/jankos_worry.png",
-    "./public/assets/jankos_blush1.png",
-    "./public/assets/jankos_cry.png",
-    "./public/assets/jankos_smirk.png",
-    "./public/assets/jankos_surprised.png",
+    "/assets/jankos_talking.png",
+    "/assets/jankos_worry.png",
+    "/assets/jankos_blush1.png",
+    "/assets/jankos_cry.png",
+    "/assets/jankos_smirk.png",
+    "/assets/jankos_surprised.png",
   ];
   const jankos = new Character(60, 90, character1Images);
   jankos.draw(background);
