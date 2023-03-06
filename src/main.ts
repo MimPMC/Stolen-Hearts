@@ -32,7 +32,7 @@ function startGame() {
   const startButton = new GameButton(
     { x: 20, y: 20 },
     { x: 20, y: 50 },
-    "Delete jankos",
+    "Delete Martin",
     "standard-button"
   );
   startButton.draw(background, function () {
@@ -43,13 +43,13 @@ function startGame() {
   const choice = new GameButton(
     { x: 20, y: 30 },
     { x: 20, y: 50 },
-    "Make jankos sad",
+    "Make Martin sad",
     "choice-button"
   );
   const blushButton = new GameButton(
     { x: 20, y: 40 },
     { x: 20, y: 50 },
-    "Make jankos surprised",
+    "Make Martin surprised",
     "choice-button"
   );
   blushButton.draw(background, function () {
@@ -78,7 +78,7 @@ function startGame() {
     const cryButton = new GameButton(
       { x: 20, y: 60 },
       { x: 20, y: 50 },
-      "make Jankos cry",
+      "make Martin cry",
       "standard-button"
     );
     jankosTextBubble.updateText("That was very mean :(")
@@ -114,7 +114,7 @@ function startGame() {
     { x: 90, y: 15 },
     "text-bubble",
     "Hey, what's up?",
-    "Jankos")
+    "Martin")
   jankosTextBubble.draw(background)
 
   
