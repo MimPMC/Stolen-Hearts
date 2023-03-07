@@ -4,7 +4,7 @@ export { };
   import Item from "./Item";
   import TextBubble from "./TextBubble";
 
-window.addEventListener("DOMContentLoaded", startGame);
+window.addEventListener("DOMContentLoaded", startTest);
 
 function startTest() {
   const app: HTMLBodyElement | null = document.querySelector(
