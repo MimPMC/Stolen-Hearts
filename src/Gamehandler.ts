@@ -1,6 +1,4 @@
-export { };
 
-/*
 export default class GameHandler {
     scenes: string[];
     activeScene: string;
@@ -74,4 +72,3 @@ export default class GameHandler {
         return !this.isMusicPlaying   
     }
 }
-*/

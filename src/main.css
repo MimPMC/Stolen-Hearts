@@ -28,7 +28,7 @@ body {
 }
 
 .standard-button {
-    background-color: rgb(40, 40, 119);
+    background-color: rgb(102, 43, 56);
     color: white;
     border: none;
     border-radius: .2rem;
@@ -40,13 +40,13 @@ body {
 }
 
 .standard-button:hover {
-    background-color: rgb(89, 89, 177);
+    background-color: rgb(85, 32, 44);
     cursor: pointer;
 }
 
 .choice-button {
-    background-color: rgb(122, 20, 68);
-    color: rgb(255, 255, 255);
+    background-color: rgb(64, 71, 134);
+    color: rgb(248, 248, 248);
     border: none;
     border-radius: .2rem;
     padding: .3rem .3rem;
@@ -56,7 +56,7 @@ body {
     transition: 200ms;
 }
 .choice-button:hover {
-    background-color: rgb(163, 41, 98);;
+    background-color: rgb(36, 40, 82);
     cursor: pointer;
 }
 

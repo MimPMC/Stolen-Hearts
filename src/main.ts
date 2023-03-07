@@ -1,11 +1,12 @@
 export { };
   import Character from "./Character";
   import GameButton from "./GameButton";
+  import Item from "./Item";
   import TextBubble from "./TextBubble";
 
 window.addEventListener("DOMContentLoaded", startGame);
 
-function startGame() {
+function startTest() {
   const app: HTMLBodyElement | null = document.querySelector(
     "#app"
   ) as HTMLBodyElement;
@@ -108,6 +109,7 @@ function startGame() {
   homeButton.draw(background, function () {
     background.style.backgroundImage = `url(${imageSources.home})`;
     jankosTextBubble.updateText("We are home")
+    fish.useItem(useMyItem);
   });
 
   const jankosTextBubble = new TextBubble( { x: 5, y: 83},
@@ -117,7 +119,47 @@ function startGame() {
     "Martin")
   jankosTextBubble.draw(background)
 
+
+  const fish = new Item({ x: 26, y: 43},
+    { x: 3, y: 15 },
+    "A fish",
+    imageSources.fisk,
+    false)
+
+  fish.draw(background)
   
 
-  
+}
+
+function startGame() {
+  const app: HTMLBodyElement | null = document.querySelector(
+    "#app"
+  ) as HTMLBodyElement;
+
+  type ImageSources = {
+    city: string;
+    fisk: string;
+    home: string;
+    pinkRoom: string;
+  };
+
+  const imageSources: ImageSources = {
+    city: "/assets/centrum_bg.png",
+    fisk: "/assets/fisk.png",
+    home: "/assets/hall.png",
+    pinkRoom: "/assets/bedroom_pink.png"
+  };
+  const background: HTMLDivElement = document.createElement("div");
+  if (imageSources.city) {
+    background.style.backgroundImage = `url(${imageSources.pinkRoom})`;
+    app?.appendChild(background);
+    background.className = "background";
+  }
+
+}
+
+
+
+function useMyItem(item: Item) {
+  console.log(`Using ${item.description}!`);
 }
