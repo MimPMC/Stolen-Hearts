@@ -1,47 +1,59 @@
 export default class Character {
-    Xposition: number;
-    height: number;
-    images: string[];
-    imageIndex: number;
-    element: HTMLImageElement | null;
+  Xposition: number;
+  height: number;
+  images: string[];
+  imageIndex: number;
+  element: HTMLDivElement | null;
 
-    constructor(Xposition:number, height:number, images: string[]) {
-        this.Xposition = Xposition;
-        this.height = height;
-        this.images = images;
-        this.imageIndex = 0; // initialize image index to 0
-        this.element = null;
-    }
+  constructor(Xposition: number, height: number, images: string[]) {
+    this.Xposition = Xposition;
+    this.height = height;
+    this.images = images;
+    this.imageIndex = 0; // initialize image index to 0
+    this.element = null;
+  }
 
-    public draw(background: HTMLDivElement) {
-        const imageElement = document.createElement("img");
-        imageElement.src = this.images[this.imageIndex];
-        imageElement.style.position = "absolute";
-        imageElement.style.left = this.Xposition + "%"
-        imageElement.style.bottom = 0 +  ""
-        imageElement.style.height = this.height + "%";
-        imageElement.style.width = "auto";
-        imageElement.style.zIndex = "120";
-        imageElement.style.transform = "translate(-50%)"
-        imageElement.style.transition = "200ms";
-        background.appendChild(imageElement);
-        this.element = imageElement;
+  public draw(background: HTMLDivElement) {
+    const characterElement = document.createElement("div");
+    characterElement.style.position = "absolute";
+    characterElement.style.height = this.height + "%";
+    characterElement.style.width = "50%";
+    characterElement.style.bottom = 0 + "";
+    characterElement.style.left = this.Xposition + "%";
+    characterElement.style.backgroundImage = `url(${
+      this.images[this.imageIndex]
+    })`;
+    characterElement.style.backgroundSize = "contain";
+    characterElement.style.backgroundRepeat = "no-repeat";
+    characterElement.style.backgroundPosition = "center bottom ";
+    characterElement.style.zIndex = "120";
+    characterElement.style.transition = "400ms ease-in-out";
+    background.appendChild(characterElement);
+    this.element = characterElement;
+  }
+  public updateSprite(imageIndex: number) {
+    if (imageIndex >= 0 && imageIndex < this.images.length) {
+      this.imageIndex = imageIndex;
+      if (this.element) {
+        this.element.style.backgroundImage = `url(${
+          this.images[this.imageIndex]
+        })`;
+      }
+    } else {
+      console.error("Invalid image index");
     }
-    public update(imageIndex: number) {
-        if (imageIndex >= 0 && imageIndex < this.images.length) {
-            this.imageIndex = imageIndex;
-            if (this.element) {
-                this.element.src = this.images[this.imageIndex];
-            }
-        } else {
-            console.error("Invalid image index");
-        }
+  }
+  public moveSprite(newPosition: number) {
+    this.Xposition = newPosition;
+    if (this.element) {
+      this.element.style.left = `${this.Xposition}%`;
     }
+  }
 
-    public erase() {
-        if (this.element) {
-            this.element.parentElement?.removeChild(this.element);
-            this.element = null;
-        }
+  public erase() {
+    if (this.element) {
+      this.element.parentElement?.removeChild(this.element);
+      this.element = null;
     }
+  }
 }

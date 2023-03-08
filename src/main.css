@@ -8,6 +8,8 @@
 body {
     height: 100%;
     width: 100vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 #app {
     width: 100%;
