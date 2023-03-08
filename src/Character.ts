@@ -5,11 +5,11 @@ export default class Character {
   imageIndex: number;
   element: HTMLDivElement | null;
 
-  constructor(Xposition: number, height: number, images: string[]) {
+  constructor(Xposition: number, height: number, images: string[], imageIndex:number) {
     this.Xposition = Xposition;
     this.height = height;
     this.images = images;
-    this.imageIndex = 0; // initialize image index to 0
+    this.imageIndex = imageIndex;
     this.element = null;
   }
 
@@ -43,6 +43,7 @@ export default class Character {
       console.error("Invalid image index");
     }
   }
+
   public moveSprite(newPosition: number) {
     this.Xposition = newPosition;
     if (this.element) {
