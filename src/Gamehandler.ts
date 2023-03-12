@@ -1,4 +1,4 @@
-import { playMainMenuScene } from "./playMainMenuScene";
+import { playMainMenuScene } from "./scene functions/playMainMenuScene";
 
 export default class GameHandler {
     activeScene: string;

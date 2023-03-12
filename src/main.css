@@ -62,6 +62,22 @@ body {
     cursor: pointer;
 }
 
+.menu-button {
+    background-color: rgb(69, 201, 179);
+    color: rgb(56, 52, 52);
+    border: none;
+    border-radius: .2rem;
+    padding: .3rem .3rem;
+    font-size: 1rem;
+    text-transform:none;
+    font-family: 'Titillium Web', sans-serif;
+    transition: 200ms;
+}
+.choice-button:hover {
+    background-color: rgb(36, 40, 82);
+    cursor: pointer;
+}
+
 .text-bubble {
     background-color: rgba(61, 55, 112, 0.7);
     border-radius: .5rem;

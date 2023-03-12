@@ -1,8 +1,9 @@
-import Character from "./Character";
-import { background, eliasImages, imageSources } from "./data";
-import GameButton from "./GameButton";
-import { gameHandler } from "./main";
-import TextBubble from "./TextBubble";
+import Character from "../Character";
+import { background, eliasImages, imageSources } from "../data";
+import GameButton from "../GameButton";
+import { gameHandler } from "../main";
+import Menu from "../Menu";
+import TextBubble from "../TextBubble";
 
 export function playMainMenuScene() {
   const app: HTMLBodyElement | null = document.querySelector(
@@ -52,6 +53,12 @@ export function playMainMenuScene() {
     elias.updateSprite(0);
     eliasBubble.updateText("Why?");
   });
+
+  const menu = new Menu({ x: 50, y: 50 },
+    { x: 60, y: 50 },
+    "/assets/hall.png",
+    )
+    menu.draw()
 
 
 
