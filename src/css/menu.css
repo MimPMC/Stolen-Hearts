@@ -16,7 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 300ms ease-out;
+    transition: all 250ms ease-out;
+    
     
 }
 .menu div {
@@ -48,6 +49,7 @@
     padding: .4rem .5rem;
     font-size: 1.2rem;
     transition: all 200ms ease;
+    
 }
 .menu-button:hover {
     background-color: #1e1f2c;
@@ -59,7 +61,7 @@
     border-radius: .5rem;
     cursor: pointer;
     background-image: url("/assets/ui/Group 14.png");
-    background-size: cover;
+    background-size: 2.8rem 2.8rem;
     background-repeat:no-repeat;
     background-position: center center;
     left: 97%;
