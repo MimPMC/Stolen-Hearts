@@ -1,57 +1,62 @@
-import GameButton from "./GameButton";
+export function createMenu() {
+  // Create menu div
+  const menuDiv = document.createElement("div");
+  menuDiv.classList.add("menu", "closed");
 
-export default class Menu {
-  position: { x: number; y: number };
-  size: { x: number; y: number };
-  background: string;
-  buttons: GameButton[];
+  // Create title h1
+  const title = document.createElement("h1");
+  title.textContent = "Game Title";
 
-  constructor(
-    position: { x: number; y: number },
-    size: { x: number; y: number },
-    background: string,
-  ) {
-    this.position = position;
-    this.size = size;
-    this.background = background;
-    this.buttons = [
-      new GameButton(
-        { x: 50, y: 70 },
-        { x: 40, y: 20 },
-        "Move elias!",
-        "choice-button"
-      ),
-      new GameButton(
-        { x: 50, y: 50 },
-        { x: 40, y: 20 },
-        "Move elias!",
-        "choice-button"
-      ),
-    ];
-  }
+  // Create button container div
+  const buttonContainer = document.createElement("div");
 
-  public draw() {
-    // Create the background div
-    const backgroundDiv = document.createElement("div");
-    backgroundDiv.style.position = "absolute";
-    backgroundDiv.style.left = "50%";
-    backgroundDiv.style.top = "50%";
-    backgroundDiv.style.transform = "translate(-50%, -50%)";
-    backgroundDiv.style.width = this.size.x + "%";
-    backgroundDiv.style.height = this.size.y + "%";
-    backgroundDiv.style.backgroundImage = `url(${this.background})`;
-    backgroundDiv.style.backgroundSize = "cover";
-    backgroundDiv.style.zIndex = "100";
-    document.body.appendChild(backgroundDiv);
+  // Create continue button
+  const continueButton = document.createElement("button");
+  continueButton.classList.add("menu-button");
+  continueButton.textContent = "Continue";
 
-    // Draw each button
-    this.buttons.forEach((button) => button.draw(backgroundDiv, () => {}));
-  }
+  // Create settings button
+  const settingsButton = document.createElement("button");
+  settingsButton.classList.add("menu-button");
+  settingsButton.textContent = "Settings";
 
+  // Create main menu button
+  const mainMenuButton = document.createElement("button");
+  mainMenuButton.classList.add("menu-button");
+  mainMenuButton.textContent = "Main Menu";
 
-  public erase() {
-    // Remove the background div and each button
-    document.body.removeChild(document.body.lastChild!);
-    this.buttons.forEach((button) => button.erase());
-  }
+  // Append elements to their parent containers
+  buttonContainer.append(continueButton, settingsButton, mainMenuButton);
+  menuDiv.append(title, buttonContainer);
+
+  // Add click event listener to menu div
+  menuDiv.addEventListener("click", (event) => {
+    // Check if the clicked element is the menu div
+    if (event.target === menuDiv) {
+      // Open the menu
+      menuDiv.classList.remove("closed");
+
+      // Add click event listener to continue button
+      continueButton.addEventListener("click", () => {
+        // Close the menu
+        menuDiv.classList.add("closed");
+        // Remove the click event listener from continue button
+        continueButton.removeEventListener("click", () => {});
+      });
+      settingsButton.addEventListener("click", () => {
+        // Close the menu
+        menuDiv.classList.add("closed");
+        // Remove the click event listener from continue button
+        continueButton.removeEventListener("click", () => {});
+      });
+      mainMenuButton.addEventListener("click", () => {
+        // Close the menu
+        menuDiv.classList.add("closed");
+        // Remove the click event listener from continue button
+        continueButton.removeEventListener("click", () => {});
+      });
+    }
+  });
+
+  return menuDiv;
 }

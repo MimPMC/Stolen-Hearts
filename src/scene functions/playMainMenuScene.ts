@@ -2,7 +2,7 @@ import Character from "../Character";
 import { background, eliasImages, imageSources } from "../data";
 import GameButton from "../GameButton";
 import { gameHandler } from "../main";
-import Menu from "../Menu";
+import { createMenu } from "../Menu";
 import TextBubble from "../TextBubble";
 
 export function playMainMenuScene() {
@@ -14,6 +14,7 @@ export function playMainMenuScene() {
     background.style.backgroundImage = `url(${imageSources.pinkRoom})`;
     app?.appendChild(background);
     background.className = "background";
+    background.append(createMenu());
   }
 
   const button = new GameButton({x:10,y:40}, {x:10,y:20}, "I want two points!", "standard-button")
@@ -46,19 +47,15 @@ export function playMainMenuScene() {
   new GameButton(
     { x: 10, y: 20 },
     { x: 10, y: 20 },
-    "Move to the right",
+    "button",
     "standard-button"
   ).draw(background, () => {
-    elias.moveSprite(64);
-    elias.updateSprite(0);
-    eliasBubble.updateText("Why?");
+
   });
 
-  const menu = new Menu({ x: 50, y: 50 },
-    { x: 60, y: 50 },
-    "/assets/hall.png",
-    )
-    menu.draw()
+
+  
+
 
 
 

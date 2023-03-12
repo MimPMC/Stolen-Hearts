@@ -61,23 +61,6 @@ body {
     background-color: rgb(36, 40, 82);
     cursor: pointer;
 }
-
-.menu-button {
-    background-color: rgb(69, 201, 179);
-    color: rgb(56, 52, 52);
-    border: none;
-    border-radius: .2rem;
-    padding: .3rem .3rem;
-    font-size: 1rem;
-    text-transform:none;
-    font-family: 'Titillium Web', sans-serif;
-    transition: 200ms;
-}
-.choice-button:hover {
-    background-color: rgb(36, 40, 82);
-    cursor: pointer;
-}
-
 .text-bubble {
     background-color: rgba(61, 55, 112, 0.7);
     border-radius: .5rem;
@@ -86,6 +69,76 @@ body {
     font-family: 'Titillium Web', sans-serif;
     padding: .9rem;
 }
+
+.menu {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top:40%;
+    width: 35%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("/assets/Rectangle11.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 200ms ease-out;
+}
+.menu div {
+    opacity: 1;
+    height: 40%;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.menu h1 {
+    opacity: 1;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 7%;
+    margin-top: 10%;
+}
+.menu-button {
+    opacity: 1;
+    margin-top: 12%;
+    background-color: #2C2F42;
+    color: #ffffff;
+    font-family: 'Righteous', cursive;
+    width: 65%;
+    border: none;
+    border-radius: .2rem;
+    padding: .4rem .5rem;
+    font-size: 1.2rem;
+    transition: all 200ms ease;
+}
+.menu-button:hover {
+    background-color: #1e1f2c;
+    cursor: pointer;
+}
+
+.menu.closed {
+    position: absolute;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-image: url("/assets/Group 14.png");
+    left: 97%;
+    top:5%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.menu.closed >* {
+    width: 0%;
+    height: 0%;
+    font-size: 1px;
+    visibility: hidden;
+} 
 
 
 @media (max-width: 800px) {
@@ -100,4 +153,13 @@ body {
         padding: .2rem;
     }
 }
+@media (max-width: 900px) {
+    .menu-button {
+        font-size: .7rem;
+    } 
+    .menu h1 {
+        font-size: 1rem;
+        margin-bottom: 10%;
+    }
 
+}
