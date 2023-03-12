@@ -71,6 +71,9 @@ function startGame() {
       elias.moveSprite(64);
     };
     button1.draw(background, doSomething1)
+
+    const button2 = new GameButton({x:10,y:70}, {x:10,y:10}, "Move to the right", "standard-button")
+    button2.draw(background, () => { elias.moveSprite(64); elias.updateSprite(1); });
   
    
   }

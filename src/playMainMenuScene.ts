@@ -1,4 +1,5 @@
-import { background, imageSources } from "./data";
+import Character from "./Character";
+import { background, eliasImages, imageSources } from "./data";
 import GameButton from "./GameButton";
 import { gameHandler } from "./main";
 import TextBubble from "./TextBubble";
@@ -24,7 +25,38 @@ export function playMainMenuScene() {
 
   const eliasBubble = new TextBubble({x:20,y:20},{x:20,y:20},"text-bubble", "Whats's up?","Elias")
   eliasBubble.draw(background)
-  eliasBubble.updateText("NewText")
+  
+
+  const elias = new Character(60,97, eliasImages,1)
+  elias.draw(background)
+
+  const move = new GameButton(
+    { x: 10, y: 60 },
+    { x: 10, y: 20 },
+    "Move elias!",
+    "standard-button"
+  )
+  move.draw(background, () => {
+    elias.moveSprite(40);
+    eliasBubble.updateText("Yea I dont know why");
+    move.erase();
+  });
+  
+  new GameButton(
+    { x: 10, y: 20 },
+    { x: 10, y: 20 },
+    "Move to the right",
+    "standard-button"
+  ).draw(background, () => {
+    elias.moveSprite(64);
+    elias.updateSprite(0);
+    eliasBubble.updateText("Why?");
+  });
+
+
+
+
+
   
   
 
