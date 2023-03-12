@@ -16,7 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 400ms ease-out;
+    transition: all 300ms ease-out;
+    
 }
 .menu div {
     opacity: 1;
@@ -33,6 +34,7 @@
     margin-top: 10%;
     color:rgba(255, 255, 255, 1);
     opacity: 1;
+    font-size: 3rem;
     transition: all 100ms ease;
 }
 .menu-button {
@@ -57,10 +59,14 @@
     border-radius: .5rem;
     cursor: pointer;
     background-image: url("/assets/ui/Group 14.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
     left: 97%;
     top:5%;
     width: 2.5rem;
     height: 2.5rem;
+    box-shadow: 2px 2px 4px #000000;
 }
 
 .menu.closed >* {
