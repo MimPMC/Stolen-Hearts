@@ -1,5 +1,5 @@
-import Character from "./Character";
-import GameButton from "./GameButton";
+import Character from "../classes/Character";
+import GameButton from "../classes/GameButton";
 
 type ImageSources = {
     city: string;

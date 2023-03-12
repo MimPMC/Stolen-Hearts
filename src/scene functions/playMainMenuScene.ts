@@ -1,9 +1,9 @@
-import Character from "../Character";
-import { background, eliasImages, imageSources } from "../data";
-import GameButton from "../GameButton";
+import Character from "../classes/Character";
+import { background, eliasImages, imageSources } from "../data/data";
+import GameButton from "../classes/GameButton";
 import { gameHandler } from "../main";
 import { createMenu } from "../Menu";
-import TextBubble from "../TextBubble";
+import TextBubble from "../classes/TextBubble";
 
 export function playMainMenuScene() {
   const app: HTMLBodyElement | null = document.querySelector(

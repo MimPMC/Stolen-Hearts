@@ -1,4 +1,4 @@
-import GameHandler from "./Gamehandler";
+import GameHandler from "./classes/Gamehandler";
 
 export { };
 

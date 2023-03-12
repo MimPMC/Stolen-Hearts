@@ -16,10 +16,10 @@ export type ImageSources = {
 };
   
 export const imageSources: ImageSources = {
-    city: "/assets/centrum_bg.png",
-    hall: "/assets/hall.png",
-    pinkRoom: "/assets/bedroom_pink.png",
-    pinkRoomDark: "/assets/bedroom_pink_night.png",
+    city: "/assets/backgrounds/centrum_bg.png",
+    hall: "/assets/backgrounds/hall.png",
+    pinkRoom: "/assets/backgrounds/bedroom_pink.png",
+    pinkRoomDark: "/assets/backgrounds/bedroom_pink_night.png",
     alice1: "/assets/Alice/alice-1.png",
     alice2: "/assets/Alice/alice-messy.png",
     elias1: "/assets/Elias/elias-sprite-1.png",
