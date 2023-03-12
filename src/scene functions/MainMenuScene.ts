@@ -10,14 +10,14 @@ export function playMainMenuScene() {
     ) as HTMLBodyElement;
   
     if (imageSources.city) {
-      background.style.backgroundImage = `url(${imageSources.pinkRoomDark})`;
+      background.style.backgroundImage = `url(${imageSources.hall})`;
       app?.appendChild(background);
       background.className = "background";
     }
 
     const startButton = new GameButton(
-        { x: 45, y: 20 },
-        { x: 10, y: 20 },
+        { x: 45, y: 15 },
+        { x: 15, y: 20 },
         "Start Game!",
         "menu-button"
       )

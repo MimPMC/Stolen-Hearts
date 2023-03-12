@@ -70,6 +70,10 @@ body {
     padding: .9rem;
 }
 
+.character-transition {
+    transition: background-image 400ms ease-in-out;
+}
+
 
 
 

@@ -15,6 +15,7 @@ export default class Character {
 
   public draw(background: HTMLDivElement) {
     const characterElement = document.createElement("div");
+    characterElement.classList.add("character-transition"); // add transition class
     characterElement.style.position = "absolute";
     characterElement.style.height = this.height + "%";
     characterElement.style.width = "50%";
@@ -31,18 +32,24 @@ export default class Character {
     background.appendChild(characterElement);
     this.element = characterElement;
   }
-  public updateSprite(imageIndex: number) {
-    if (imageIndex >= 0 && imageIndex < this.images.length) {
-      this.imageIndex = imageIndex;
-      if (this.element) {
-        this.element.style.backgroundImage = `url(${
-          this.images[this.imageIndex]
-        })`;
+  
+public updateSprite(imageIndex: number) {
+  if (imageIndex >= 0 && imageIndex < this.images.length) {
+    this.imageIndex = imageIndex;
+    if (this.element) {
+      this.element.classList.remove("character-transition"); // remove transition class
+      console.log(this.element.classList)
+      this.element.style.backgroundImage = `url(${this.images[this.imageIndex]})`;
+      setTimeout(() => {
+      if(this.element) {
+        this.element.classList.add("character-transition"); // add transition class
       }
-    } else {
-      console.error("Invalid image index");
+      }, 0);
     }
+  } else {
+    console.error("Invalid image index");
   }
+}
 
   public moveSprite(newPosition: number) {
     this.Xposition = newPosition;

@@ -1,5 +1,8 @@
+import Character from "../classes/Character";
+
 export const background: HTMLDivElement = document.createElement("div");
 
+export let yourCharacter = Character
 
 export type ImageSources = {
     city: string;

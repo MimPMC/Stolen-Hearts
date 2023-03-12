@@ -89,6 +89,9 @@ function startGame() {
       app?.appendChild(background);
       background.className = "background";
     }
+    const sarah = new Character(40,85, sarahImages,1)
+    const alice = new Character(10,85, aliceImages,1)
+  
     
     alice.draw(background)
     sarah.draw(background)
