@@ -1,22 +1,15 @@
 import Character from "../classes/Character";
-import { background, eliasImages, imageSources } from "../data/data";
 import GameButton from "../classes/GameButton";
+import TextBubble from "../classes/TextBubble";
+import { background, eliasImages, imageSources } from "../data/data";
 import { gameHandler } from "../main";
 import { createMenu } from "../Menu";
-import TextBubble from "../classes/TextBubble";
 
-export function playMainMenuScene() {
-  const app: HTMLBodyElement | null = document.querySelector(
-    "#app"
-  ) as HTMLBodyElement;
-
-  if (imageSources.city) {
-    background.style.backgroundImage = `url(${imageSources.pinkRoom})`;
-    app?.appendChild(background);
-    background.className = "background";
-    background.append(createMenu());
-  }
-
+export function playChapter1() {
+  
+  background.style.backgroundImage = `url(${imageSources.pinkRoom})`;
+  background.append(createMenu());
+  
   const button = new GameButton({x:10,y:40}, {x:10,y:20}, "I want two points!", "standard-button")
   button.draw(background, addTwoPoints)
 
@@ -52,17 +45,6 @@ export function playMainMenuScene() {
   ).draw(background, () => {
 
   });
-
-
-  
-
-
-
-
-
-
-  
-  
 
   
 }

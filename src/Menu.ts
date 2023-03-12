@@ -1,3 +1,6 @@
+import { background } from "./data/data";
+import { gameHandler } from "./main";
+
 export function createMenu() {
   // Create menu div
   const menuDiv = document.createElement("div");
@@ -50,10 +53,12 @@ export function createMenu() {
         continueButton.removeEventListener("click", () => {});
       });
       mainMenuButton.addEventListener("click", () => {
-        // Close the menu
-        menuDiv.classList.add("closed");
-        // Remove the click event listener from continue button
-        continueButton.removeEventListener("click", () => {});
+        console.log("back to main menu")
+        while (background.firstChild) {
+            background.removeChild(background.firstChild)
+        }
+        gameHandler.renderActiveScene("mainmenu")
+        mainMenuButton.removeEventListener("click", () => {});
       });
     }
   });

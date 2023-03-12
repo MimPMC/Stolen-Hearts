@@ -1,4 +1,5 @@
-import { playMainMenuScene } from "../scene functions/playMainMenuScene";
+import { playMainMenuScene } from "../scene functions/MainMenuScene";
+import { playChapter1 } from "../scene functions/playChapter1";
 
 export default class GameHandler {
     activeScene: string;
@@ -25,7 +26,7 @@ export default class GameHandler {
                 //start background story scene
             break
             case "chapter1":
-                //start gameplay scene
+                playChapter1()
             break
             default:
                 //start main menu music
