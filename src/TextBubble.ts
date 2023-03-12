@@ -38,9 +38,12 @@ export default class TextBubble {
     public updateText(newText: string) {
         this.text = newText;
         if (this.element) {
-            this.element.innerHTML = this.text;
+          const textBubbleText = this.element.querySelector("p");
+          if (textBubbleText) {
+            textBubbleText.innerHTML = this.text;
+          }
         }
-    }
+      }
 
     public erase() {
         if (this.element) {

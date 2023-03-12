@@ -4,8 +4,7 @@ export { };
 
 window.addEventListener("DOMContentLoaded", start);
 
-const gameHandler = new GameHandler(["mainmenu", "library", "story", "chapter1"]);
-
+export const gameHandler = new GameHandler();
 function start() {
   gameHandler.renderActiveScene("mainmenu");
 }

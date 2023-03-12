@@ -40,7 +40,7 @@ type ImageSources = {
   const alice = new Character(10,85, aliceImages,1)
   
   
-  function startGame() {
+function startGame() {
     const app: HTMLBodyElement | null = document.querySelector(
       "#app"
     ) as HTMLBodyElement;
