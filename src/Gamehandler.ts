@@ -2,24 +2,21 @@
 export default class GameHandler {
     scenes: string[];
     activeScene: string;
-    music: string;
+    //music: string;
     isMusicPlaying: boolean;
     points: number;
 
 
-    constructor(scene:string[], music:string) {
+    constructor(scene:string[],) {
         this.scenes = scene
-        this.music = music
+        //this.music = music
         this.isMusicPlaying = false
         this.points = 0
         this.activeScene = "mainmenu"
     }
 
-    public changeScene(scene:string) {
-        return this.activeScene = scene 
-    }
-
-    public renderActiveScene() {
+    public renderActiveScene(scene:string) {
+        this.activeScene = scene 
         switch(this.activeScene) {
             case "mainmenu":
                 //start main menu scene
@@ -30,7 +27,7 @@ export default class GameHandler {
             case "story":
                 //start background story scene
             break
-            case "play":
+            case "chapter1":
                 //start gameplay scene
             break
             default:
@@ -51,7 +48,7 @@ export default class GameHandler {
             return this.points
         }
     }
-    public changeMusic(){
+    /*public changeMusic(){
         switch(this.music) {
             case "sadsong":
                 //start main menu music
@@ -70,5 +67,5 @@ export default class GameHandler {
     }
     public toggleMusic() {
         return !this.isMusicPlaying   
-    }
+    }*/
 }
