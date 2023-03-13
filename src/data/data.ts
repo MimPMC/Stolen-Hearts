@@ -4,6 +4,7 @@ export const background: HTMLDivElement = document.createElement("div");
 export let yourCharacter = Character
 
 export type ImageSources = {
+    mainMenu:string;
     city: string;
     hall: string;
     pinkRoom: string;
@@ -18,6 +19,7 @@ export type ImageSources = {
 };
   
 export const imageSources: ImageSources = {
+    mainMenu: "/assets/backgrounds/menu-bg.png",
     city: "/assets/backgrounds/centrum_bg.png",
     hall: "/assets/backgrounds/hall.png",
     pinkRoom: "/assets/backgrounds/bedroom_pink.png",

@@ -1,6 +1,5 @@
-import GameButton from "../classes/GameButton";
 import { background, imageSources } from "../data/data";
-import { gameHandler } from "../main";
+import { createMainMenu } from "../mainmenu";
 
 
 export function playMainMenuScene() {
@@ -10,22 +9,14 @@ export function playMainMenuScene() {
     ) as HTMLBodyElement;
   
     if (imageSources.city) {
-      background.style.backgroundImage = `url(${imageSources.hall})`;
+      background.style.backgroundImage = `url(${imageSources.mainMenu})`;
       app?.appendChild(background);
       background.className = "background";
     }
 
-    const startButton = new GameButton(
-        { x: 45, y: 15 },
-        { x: 15, y: 20 },
-        "Start Game!",
-        "menu-button"
-      )
-      startButton.draw(background, () => {
-        while (background.firstChild) {
-            background.removeChild(background.firstChild)
-        }
-        startButton.erase();
-        gameHandler.renderActiveScene("chapter1")
-      });
+    background.append(createMainMenu());
+
+      
+
+    
   }
