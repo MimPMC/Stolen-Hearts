@@ -30,7 +30,7 @@
 }
 
 .mainmenu-button {
-margin: 1rem;
+    margin: 1rem;
   background-color: #2c2f42;
   color: #ffffff;
   font-family: "Righteous", cursive;
@@ -38,7 +38,7 @@ margin: 1rem;
   border: none;
   border-radius: 1rem;
   padding: 0.4rem 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   box-shadow: 2px 2px 4px #000000;
   transition: all 200ms ease;
   background-color: #1e1f2c;
@@ -53,14 +53,14 @@ margin: 1rem;
   height: auto;
   transform: translate(-50%, -50%);
 }
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .mainmenu {
         width: 55%;
         top:50%;
       }
     .mainmenu-button {
         margin: .5rem;
-        font-size: .7rem;
+        font-size: .9rem;
     } 
     .titleImg {
         position: absolute;
