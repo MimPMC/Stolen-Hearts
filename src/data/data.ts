@@ -1,7 +1,6 @@
 import Character from "../classes/Character";
 
 export const background: HTMLDivElement = document.createElement("div");
-
 export let yourCharacter = Character
 
 export type ImageSources = {
@@ -25,8 +24,8 @@ export const imageSources: ImageSources = {
     pinkRoomDark: "/assets/backgrounds/bedroom_pink_night.png",
     alice1: "/assets/Alice/alice-1.png",
     alice2: "/assets/Alice/alice-messy.png",
-    elias1: "/assets/Elias/elias-sprite-1.png",
-    elias2: "/assets/Elias/elias-sprite-2.png",
+    elias1: "/assets/Elias/elias-normal.png",
+    elias2: "/assets/Elias/elias-angry-talking.png",
     sarah1: "/assets/Sarah/sarah-1.png",
     sarah2: "/assets/Sarah/sarah-messy.png"
 };

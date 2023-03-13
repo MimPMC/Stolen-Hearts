@@ -78,7 +78,7 @@ function startGame() {
    
   }
   
-  function characterChoice() {
+function characterChoice() {
     const app: HTMLBodyElement | null = document.querySelector(
       "#app"
     ) as HTMLBodyElement;
@@ -122,9 +122,9 @@ function startGame() {
       yourCharacter = sarah
     };
     pickSarahButton.draw(background, pickSarah)
-  }
+}
   
-  function changeClothes(main:Character, background:HTMLDivElement) {
+function changeClothes(main:Character, background:HTMLDivElement) {
     if (main === sarah) {
       console.log("Changing clothes for Sarah");
       const button1 = new GameButton({x:20,y:20}, {x:10,y:20}, "Get dressed!", "choice-button")
@@ -149,6 +149,6 @@ function startGame() {
     } else {
       console.log("Unknown character");
     }
-  }
+}
   
   
