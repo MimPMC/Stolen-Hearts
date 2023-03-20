@@ -14,9 +14,5 @@ export function playMainMenuScene() {
       background.className = "background";
     }
 
-    background.append(createMainMenu());
-
-      
-
-    
+    background.append(createMainMenu());   
   }
