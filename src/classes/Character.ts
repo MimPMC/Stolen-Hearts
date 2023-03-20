@@ -28,7 +28,7 @@ export default class Character {
     characterElement.style.backgroundRepeat = "no-repeat";
     characterElement.style.backgroundPosition = "center bottom ";
     characterElement.style.zIndex = "120";
-    characterElement.style.transition = "400ms ease-in-out";
+    characterElement.style.transition = "all 400ms ease-in-out";
     background.appendChild(characterElement);
     this.element = characterElement;
   }
@@ -37,14 +37,8 @@ public updateSprite(imageIndex: number) {
   if (imageIndex >= 0 && imageIndex < this.images.length) {
     this.imageIndex = imageIndex;
     if (this.element) {
-      this.element.classList.remove("character-transition"); // remove transition class
       console.log(this.element.classList)
       this.element.style.backgroundImage = `url(${this.images[this.imageIndex]})`;
-      setTimeout(() => {
-      if(this.element) {
-        this.element.classList.add("character-transition"); // add transition class
-      }
-      }, 0);
     }
   } else {
     console.error("Invalid image index");

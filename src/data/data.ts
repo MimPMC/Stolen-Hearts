@@ -35,3 +35,6 @@ export const imageSources: ImageSources = {
 export const aliceImages = [ imageSources.alice1,imageSources.alice2]
 export const eliasImages = [ imageSources.elias1,imageSources.elias2]
 export const sarahImages = [ imageSources.sarah1,imageSources.sarah2]
+
+
+

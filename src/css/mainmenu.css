@@ -44,6 +44,14 @@
   background-color: #1e1f2c;
   cursor: pointer;
 }
+.mainmenu-button:active {
+  transform: scale(0.96);
+  
+}
+.mainmenu-button:hover {
+  background-color: #2a2b3d;
+  cursor: pointer;
+}
 
 .titleImg {
   position: absolute;

@@ -1,5 +1,6 @@
 import Character from "../classes/Character";
 import GameButton from "../classes/GameButton";
+import { gameHandler } from "../main";
 
 type ImageSources = {
     city: string;
@@ -148,6 +149,18 @@ function changeClothes(main:Character, background:HTMLDivElement) {
       console.log("Changing clothes for Alice");
     } else {
       console.log("Unknown character");
+    }
+    const button = new GameButton(
+      { x: 10, y: 40 },
+      { x: 10, y: 20 },
+      "I want two points!",
+      "standard-button"
+    );
+    button.draw(background, addTwoPoints);
+  
+    function addTwoPoints() {
+      gameHandler.setPoints("+", 2);
+      console.log(`current points: ${gameHandler.getPoints()}`);
     }
 }
   
