@@ -8,7 +8,7 @@ export default class Item {
     isInInventory: boolean;
     element: HTMLImageElement | null;
 
-    constructor(position:{x:number,y:number}, size: {x:number,y:number}, description: string, image: string, isInInventory: boolean) {
+    constructor(position:{x:number,y:number}, size: {x:number,y:number}, description: string, image: string) {
         this.position = position;
         this.size = size;
         this.image = image;

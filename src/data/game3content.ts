@@ -1,8 +1,6 @@
-import Character from "../classes/Character";
-import GameButton from "../classes/GameButton";
-import { gameHandler } from "../main";
+export { };
 
-type ImageSources = {
+/*type ImageSources = {
     city: string;
     hall: string;
     pinkRoom: string;
@@ -164,4 +162,4 @@ function changeClothes(main:Character, background:HTMLDivElement) {
     }
 }
   
-  
+*/
