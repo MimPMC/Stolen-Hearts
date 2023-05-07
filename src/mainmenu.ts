@@ -9,7 +9,7 @@ export function createMainMenu() {
   // Create title h1
   const title = document.createElement("img");
   title.classList.add("titleImg")
-  title.src = "/assets/ui/gametitle.png";
+  title.src = "/assets/ui/stolenHeart.png";
 
   // Create button container div
   const buttonContainer = document.createElement("div");
