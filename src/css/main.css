@@ -30,7 +30,7 @@ body {
 }
 
 .standard-button {
-    background-color: rgb(102, 43, 56);
+    background-color: rgb(121, 7, 64);
     color: white;
     border: none;
     border-radius: .2rem;
@@ -42,7 +42,7 @@ body {
 }
 
 .standard-button:hover {
-    background-color: rgb(85, 32, 44);
+    background-color: rgb(89,0,44);
     cursor: pointer;
 }
 .standard-button:active {
@@ -70,9 +70,8 @@ body {
     transform: scale(0.96);
 }
 .text-bubble {
-    background-color: rgba(61, 55, 112, 0.7);
     border-radius: .5rem;
-    border: 2px solid rgb(23, 23, 63);
+    border: 2px solid rgb(27, 16, 19);
     color: white;
     font-family: 'Titillium Web', sans-serif;
     padding: .9rem;

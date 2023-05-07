@@ -4,13 +4,15 @@ export default class Character {
   images: string[];
   imageIndex: number;
   element: HTMLDivElement | null;
+  name:string;
 
-  constructor(Xposition: number, height: number, images: string[], imageIndex:number) {
+  constructor(Xposition: number, height: number, images: string[], imageIndex:number, name: string) {
     this.Xposition = Xposition;
     this.height = height;
     this.images = images;
     this.imageIndex = imageIndex;
     this.element = null;
+    this.name = name
   }
 
   public draw(background: HTMLDivElement) {

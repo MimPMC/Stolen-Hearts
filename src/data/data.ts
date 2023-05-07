@@ -54,7 +54,7 @@ export const imageSources: ImageSources = {
     hall: "/assets/backgrounds/hall.png",
     pinkRoom: "/assets/backgrounds/bedroom_pink.png",
     pinkRoomDark: "/assets/backgrounds/bedroom_pink_night.png",
-    school: "/assets/backgrounds/bg school.png",
+    school: "/assets/backgrounds/bg-school.png",
     cityNight: "/assets/backgrounds/bg-city-night.png",
     mcDonalds: "/assets/backgrounds/mcdonuts_1.png",
 
@@ -102,7 +102,7 @@ export const aliceImages = [
     imageSources.aliceBlush,
   ];
   
-  export const eliasImages = [
+export const eliasImages = [
     imageSources.eliasNormal,
     imageSources.eliasAngryTalking,
     imageSources.eliasAngry,
@@ -116,15 +116,15 @@ export const aliceImages = [
     imageSources.eliasThinking,
   ];
   
-  export const sarahImages = [
+export const sarahImages = [
     imageSources.sofieNormal,
     imageSources.sofieMessy,
     imageSources.sofieTalking,
     imageSources.sofieSmile,
     imageSources.sofieBlush,
-  ];
+];
   
-  export const isacImages = [
+export const isacImages = [
     imageSources.isacNormal,
     imageSources.isacAngryTalking,
     imageSources.isacAngry,
@@ -134,4 +134,4 @@ export const aliceImages = [
     imageSources.isacSurprised,
     imageSources.isacTalking,
     imageSources.isacThinking,
-  ];
+];

@@ -1,5 +1,5 @@
 import { playMainMenuScene } from "../scene functions/MainMenuScene";
-import { playChapter1 } from "../scene functions/playChapter1";
+import { playChapter1, playChapter2 } from "../scene functions/playChapter1";
 
 export default class GameHandler {
     activeScene: string;
@@ -27,6 +27,9 @@ export default class GameHandler {
             break
             case "chapter1":
                 playChapter1()
+            break
+            case "chapter2":
+                playChapter2()
             break
             default:
                 //start main menu music
